@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+}
+
+/* Chat Widget Styles */
+.chat-widget {
+  @apply fixed bottom-4 right-4 z-50;
+}
+
+.chat-bubble {
+  @apply max-w-[80%] p-3 rounded-lg mb-2;
+}
+
+.chat-bubble-user {
+  @apply bg-primary-500 text-white ml-auto;
+}
+
+.chat-bubble-other {
+  @apply bg-gray-200 text-gray-800;
+}
+
+/* Product Grid */
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+/* Loading Spinner */
+.spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-primary-600;
+}
+
+/* Form Styles */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-error {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-gray-600 hover:text-gray-900 transition-colors duration-200;
+}
+
+.nav-link-active {
+  @apply text-primary-600 font-medium;
+}
